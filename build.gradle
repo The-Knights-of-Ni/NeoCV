@@ -31,7 +31,7 @@ ext {
     commonLibVersion = '2.12.4'
     versionBuildTool = '30.0.3'
     versionCompiler = 33
-    versionTarget = 29
+    versionTarget = 33
     versionNameString = '1.0.0'
     javaSourceCompatibility = JavaVersion.VERSION_17
     javaTargetCompatibility = JavaVersion.VERSION_17
