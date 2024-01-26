@@ -1,7 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-
     repositories {
         google()
         jcenter()
@@ -30,7 +29,7 @@ task clean(type: Delete) {
 ext {
     supportLibVersion = '27.1.1'  // variable that can be referenced to keep support libs consistent
     commonLibVersion = '2.12.4'
-    versionBuildTool = '27.0.3'
+    versionBuildTool = '30.0.3'
     versionCompiler = 33
     versionTarget = 29
     versionNameString = '1.0.0'

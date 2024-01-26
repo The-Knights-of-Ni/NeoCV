@@ -25,8 +25,10 @@ apply plugin: 'com.android.library'
 import org.apache.tools.ant.taskdefs.condition.Os
 
 android {
-    compileSdkVersion versionCompiler
+    compileSdk versionCompiler
     buildToolsVersion versionBuildTool
+
+    namespace 'com.serenegiant.uvccamera'
 
     compileOptions {
         sourceCompatibility javaSourceCompatibility
@@ -34,7 +36,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 20
+        minSdkVersion 24
         targetSdkVersion versionTarget
     }
 
@@ -53,7 +55,7 @@ android {
 }
 
 tasks.withType(JavaCompile) {
-	compileTask -> compileTask.dependsOn ndkBuild
+    compileTask -> compileTask.dependsOn ndkBuild
 }
 
 String getNdkBuildPath() {
@@ -61,6 +63,9 @@ String getNdkBuildPath() {
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
     def ndkBuildingDir = properties.getProperty("ndk.dir")
     def ndkBuildPath = ndkBuildingDir
+    if (ndkBuildingDir == null || ndkBuildingDir.isEmpty()) {
+        throw new GradleException("NDK location not found. Define location with ndk.dir in the local.properties file.")
+    }
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         ndkBuildPath = ndkBuildingDir + '/ndk-build.cmd'
     } else {
@@ -86,10 +91,10 @@ clean.dependsOn 'ndkClean'
 dependencies {
     implementation fileTree(dir: new File(buildDir, 'libs'), include: '*.jar')
 
-	implementation "com.android.support:support-v4:${supportLibVersion}"
-	implementation "com.android.support:support-annotations:${supportLibVersion}"
+    implementation "com.android.support:support-v4:${supportLibVersion}"
+    implementation "com.android.support:support-annotations:${supportLibVersion}"
 
-	implementation("com.serenegiant:common:${commonLibVersion}") {
-		exclude module: 'support-v4'
-	}
+    implementation("com.serenegiant:common:${commonLibVersion}") {
+        exclude module: 'support-v4'
+    }
 }
