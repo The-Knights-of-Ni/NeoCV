@@ -1,4 +1,11 @@
-# EasyOpenCV
+# NeoCV
+
+A fork of OpenCV that uses libuvc instead of the FIRST API.
+
+## Rational
+
+The FIRST API is not very good. It is slow, and wastes computing resources.
+This attempts to fix that with a fork that uses libuvc instead of the FIRST API.
 
 NOTE: SDK v9.0+ is required to use this
 

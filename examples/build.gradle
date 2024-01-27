@@ -29,5 +29,5 @@ android {
 dependencies {
     //implementation fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly 'org.firstinspires.ftc:RobotCore:9.0.1'
-    compileOnly project(':easyopencv')
+    compileOnly project(':neocv')
 }

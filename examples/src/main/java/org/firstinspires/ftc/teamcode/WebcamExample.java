@@ -29,11 +29,11 @@ import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-import org.openftc.easyopencv.OpenCvCamera;
-import org.openftc.easyopencv.OpenCvCameraFactory;
-import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvPipeline;
-import org.openftc.easyopencv.OpenCvWebcam;
+import org.openftc.neocv.OpenCvCamera;
+import org.openftc.neocv.OpenCvCameraFactory;
+import org.openftc.neocv.OpenCvCameraRotation;
+import org.openftc.neocv.OpenCvPipeline;
+import org.openftc.neocv.OpenCvWebcam;
 
 @TeleOp
 public class WebcamExample extends LinearOpMode

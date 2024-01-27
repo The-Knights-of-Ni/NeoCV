@@ -34,11 +34,11 @@ import org.opencv.core.RotatedRect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
-import org.openftc.easyopencv.OpenCvCamera;
-import org.openftc.easyopencv.OpenCvCameraFactory;
-import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvInternalCamera2;
-import org.openftc.easyopencv.OpenCvPipeline;
+import org.openftc.neocv.OpenCvCamera;
+import org.openftc.neocv.OpenCvCameraFactory;
+import org.openftc.neocv.OpenCvCameraRotation;
+import org.openftc.neocv.OpenCvInternalCamera2;
+import org.openftc.neocv.OpenCvPipeline;
 
 import java.util.ArrayList;
 import java.util.Arrays;

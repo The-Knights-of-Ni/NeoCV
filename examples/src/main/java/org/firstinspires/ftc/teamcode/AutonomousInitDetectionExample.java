@@ -25,10 +25,10 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.openftc.easyopencv.OpenCvCamera;
-import org.openftc.easyopencv.OpenCvCameraFactory;
-import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvWebcam;
+import org.openftc.neocv.OpenCvCamera;
+import org.openftc.neocv.OpenCvCameraFactory;
+import org.openftc.neocv.OpenCvCameraRotation;
+import org.openftc.neocv.OpenCvWebcam;
 
 /*
  * This sample demonstrates how to run analysis during INIT

@@ -28,12 +28,12 @@ import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-import org.openftc.easyopencv.OpenCvCamera;
-import org.openftc.easyopencv.OpenCvCameraFactory;
-import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvInternalCamera;
-import org.openftc.easyopencv.OpenCvTracker;
-import org.openftc.easyopencv.OpenCvTrackerApiPipeline;
+import org.openftc.neocv.OpenCvCamera;
+import org.openftc.neocv.OpenCvCameraFactory;
+import org.openftc.neocv.OpenCvCameraRotation;
+import org.openftc.neocv.OpenCvInternalCamera;
+import org.openftc.neocv.OpenCvTracker;
+import org.openftc.neocv.OpenCvTrackerApiPipeline;
 
 /**
  * In this sample, we demonstrate how to use the {@link OpenCvTrackerApiPipeline()}

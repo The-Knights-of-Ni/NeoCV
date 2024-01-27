@@ -1,4 +1,4 @@
-include ':easyopencv', ':examples'
+include ':neocv', ':examples'
 
 include ':OpenCV-Android-SDK'
 include ':libuvccamera'
