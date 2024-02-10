@@ -1,7 +1,0 @@
-include ':neocv', ':examples'
-
-include ':OpenCV-Android-SDK'
-include ':libuvccamera'
-include ':usbCameraCommon'
-
-project(':OpenCV-Android-SDK').projectDir = new File('easyopencv/OpenCV-Repackaged/OpenCV-Android-SDK')

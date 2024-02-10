@@ -1,6 +1,0 @@
-[submodule "easyopencv/AndroidJpegTurbo"]
-	path = easyopencv/AndroidJpegTurbo
-	url = https://github.com/OpenFTC/AndroidJpegTurbo.git
-[submodule "easyopencv/OpenCV-Repackaged"]
-	path = easyopencv/OpenCV-Repackaged
-	url = https://github.com/OpenFTC/OpenCV-Repackaged.git
