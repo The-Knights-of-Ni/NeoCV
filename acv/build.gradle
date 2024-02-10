@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+
+ext {
+    PUBLISH_GROUP_ID = 'org.knightsofni'
+    PUBLISH_ARTIFACT_ID = 'acv'
+    PUBLISH_VERSION = '0.0.0-PREALPHA'
+}
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    namespace 'org.knightsofni.acv'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 24
+        //noinspection EditedTargetSdkVersion
+        targetSdkVersion 34
+        versionCode 1
+        versionName PUBLISH_VERSION
+    }
+
+    buildTypes {
+
+        debug {
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+
+            buildConfigField("String","_VERSION_NAME","\"" + PUBLISH_VERSION + "-DEV\"")
+        }
+
+        release {
+            minifyEnabled false
+
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+
+            buildConfigField("String","_VERSION_NAME","\"" + PUBLISH_VERSION + "\"")
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    ndkVersion '26.0.10792818'
+    buildFeatures.buildConfig true
+}
+
+dependencies {
+    implementation 'org.firstinspires.ftc:RobotCore:9.0.1'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+
+//test {
+//    useJUnitPlatform()
+//}
