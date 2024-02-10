@@ -1,13 +1,18 @@
 package org.knightsofni.acv;
 
 public class RustNativeOptions {
-    public String cameraName;
-    public String socketPath;
-    public boolean useSocketInput; // Experimental
+    public enum CommunicationMethod {
+        SOCKET,
+        NETWORK
+    }
 
-    public RustNativeOptions(String cameraName, String socketPath, boolean useSocketInput) {
+    public String cameraName;
+    public String path;
+    public CommunicationMethod communicationMethod; // Experimental
+
+    public RustNativeOptions(String cameraName, String path, CommunicationMethod communicationMethod) {
         this.cameraName = cameraName;
-        this.socketPath = socketPath;
-        this.useSocketInput = useSocketInput;
+        this.path = path;
+        this.communicationMethod = communicationMethod;
     }
 }

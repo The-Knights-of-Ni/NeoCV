@@ -5,9 +5,9 @@ public class RustNative {
         System.loadLibrary("acv");
     }
 
-    public void run(RustCamera input, RustNativeOptions options) {
-        nativeRun(input, options.cameraName, options.socketPath, options.useSocketInput);
+    public static void run(RustCamera input, RustNativeOptions options) {
+        nativeRun(input, options.cameraName, options.path, options.communicationMethod == RustNativeOptions.CommunicationMethod.SOCKET);
     }
 
-    public native void nativeRun(RustCamera input, String cameraName, String socketPath, boolean useSocketInput);
+    public static native void nativeRun(RustCamera input, String cameraName, String path, boolean useSocketInput);
 }
