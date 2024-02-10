@@ -172,7 +172,7 @@ public class RustFTCCameraImpl extends RustFTCCameraBase implements RustCamera, 
     }
 
     public void startStreaming(int width, int height) {
-        startStreaming(width, height, StreamFormat.YUY2);
+        startStreaming(width, height, StreamFormat.MJPEG);
     }
 
     private int streamFormat2ImageFormat(StreamFormat streamFormat) {
