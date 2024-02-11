@@ -26,5 +26,5 @@ public class RustRunner {
 
     public void abort() {
         thread.interrupt();
-    }
+    } // TODO: Safe stop with socket message
 }
